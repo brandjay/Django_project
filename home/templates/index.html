@@ -5,68 +5,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-  <!--boxicon cdn-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <style>
   body{
-    background-color: grey;
-    color: whitesmoke;
-  }
-  .card{
     background-color: white;
     color: black;
   }
-  .breadcrumb{
-    place-content: center;
-  }
+
 
 </style>
 <body>
+
+<!-- menu -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">TheSocialBlade</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="{% url 'posts' %}">Post</a></li>
+        <li><a href="{% url 'accounts' %}">My profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--end menu-->
 <div class="content">
 <div class="container text-center">
-  <h1>Home</h1>
-  <p>welcome</p>
-<!-- menu -->
+<h1>Welcome</h1><!-- menu -->
+<!---
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'signup' %}"><i class="fa-solid fa-user-plus fa-lg"></i></a></li>
-    <li class="breadcrumb-item"> <a href="{% url 'posts' %}"><i class="fa-solid fa-signs-post fa-lg"></i></a> </li>
-    <li class="breadcrumb-item">  <a href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket fa-lg"></i> </a></li>
-    <li class="breadcrumb-item" id="plane">  <a href="#"><i class="fa-regular fa-paper-plane fa-lg" id="plane"></i> </a></li>
-
+    <li class="breadcrumb-item"><a href="{% url 'signup' %}">Sign up <br></li>
+    <br>
+    <li class="breadcrumb-item"> <a href="{% url 'posts' %}">View post</li>
+    <br>
+    <li class="breadcrumb-item">  <a href="{% url 'login' %}">Login</a></li>
+    <br>
+    <a href="{% url 'accounts' %}">Profile Page</a>
 
   </ol>
 </nav>
 
-<!--end menu-->
+end menu-->
  
 
   <!--card -->
-  <div class="container text-center">
-    <div class="card">
-      <div class="card-body">
-        <h2>
-        Socialize with friends
-        </h2>
-      </div>
-    </div>
-  </div>
-  </div>
-  <script>function msg(){
-    alert("This is not yet aviable");
-    document.getElementById("plane").addEventListener("click", msg);
-
-  }</script>
- </body>
+  
+</body>

@@ -7,6 +7,8 @@ from sqlalchemy import true
 from django.contrib import admin
 from django.conf import settings # needed for importing author function
 from tinymce.models import HTMLField
+from django.utils.html import mark_safe
+
 
 # Create your models here.
 
@@ -21,5 +23,7 @@ class Post(models.Model):
     quote = HTMLField(null=True) #was models.Textfield
 
     date = models.DateTimeField(auto_now_add=True, null=True)
-   
-
+    
+    #display the name of post in django admin
+    def __str__(self):
+        return self.title, self.quote
