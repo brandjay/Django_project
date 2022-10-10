@@ -9,14 +9,11 @@
 
 
 </head>
-
           
   <div class="container justify-content-center">
     <div class="card" style="width:400px">
       <h2>Welcome {{ request.user.username }}</h2>
-
-      <img class="card-img-top" src="img_avatar1.png" alt="profile pic" style="width:100%">
-      <div class="card-body">
+             <div class="card-body">
         <h4 class="card-title">{{request.user.email}}</h4>
         <p class="card-text">Bio</p>
         <a href="#" class="btn btn-primary">Edit bio</a>

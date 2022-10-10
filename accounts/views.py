@@ -7,6 +7,7 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
+from django.http import HttpResponseRedirect
 from matplotlib.style import context
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
